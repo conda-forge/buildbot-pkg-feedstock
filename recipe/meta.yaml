@@ -1,18 +1,18 @@
 {% set name = "buildbot-pkg" %}
-{% set version = "2.6.0" %}
+{% set version = "2.7.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 9f2cbf8cced3d48b18c912544a09d5d4fdbc7a0970a4dad68a87c0c40c99d61f
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 6bb62e8e9df65204ce8006de190522f8304c797b061ead706abb218e7202eb0f
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv "
+  script: '{{ PYTHON }} -m pip install . -vv '
 
 requirements:
   host:
@@ -28,12 +28,12 @@ test:
     - buildbot_pkg
 
 about:
-  home: "https://buildbot.net/"
-  license: "GNU General Public (GPL)"
-  license_family: "LGPL"
-  license_file: "LICENSE"
-  summary: "Buildbot packaging tools"
-  doc_url: "https://docs.buildbot.net"
+  home: https://buildbot.net/
+  license: GNU General Public (GPL)
+  license_family: LGPL
+  license_file: LICENSE
+  summary: Buildbot packaging tools
+  doc_url: https://docs.buildbot.net
 
 extra:
   recipe-maintainers:
