@@ -10,9 +10,9 @@ source:
   sha256: bf031e83083f698291ffed7622a5970d1b344b4869d9532cb899238ca0194e27
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: '{{ PYTHON }} -m pip install . -vv '
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -26,11 +26,15 @@ requirements:
 test:
   imports:
     - buildbot_pkg
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://buildbot.net/
-  license: GNU General Public (GPL)
-  license_family: LGPL
+  license: GPL-2.0-or-later
+  license_family: GPL
   license_file: LICENSE
   summary: Buildbot packaging tools
   doc_url: https://docs.buildbot.net
