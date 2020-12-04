@@ -5,11 +5,11 @@ Home: https://buildbot.net/
 
 Package license: GPL-2.0-or-later
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/buildbot-pkg-feedstock/blob/master/LICENSE.txt)
 
 Summary: Buildbot packaging tools
 
-
+Documentation: https://docs.buildbot.net
 
 Current build status
 ====================
