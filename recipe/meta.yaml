@@ -1,5 +1,5 @@
 {% set name = "buildbot-pkg" %}
-{% set version = "3.0.2" %}
+{% set version = "3.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8028a1a6e2b9ae9a7acb2ce27e922e2228c97d80cd55fdb2c089dab775ec2aef
+  sha256: 797bdf31b7f56c63cbb18a35a7c665b8136e9684d33aec3a9d8c08c708c6612f
 
 build:
   number: 0
